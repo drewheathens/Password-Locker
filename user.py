@@ -10,11 +10,13 @@ class user:
         save_account method saves account objects into account_list
         '''
 
-        Accountt.account_list.append(self)
+        Account.account_list.append(self)
 
     def __init__(self,first_name,last_name,phone_number,account_name,email,password):
 
       # docstring removed for simplicity
+
+        
 
         self.first_name = first_name
         self.last_name = last_name
@@ -30,3 +32,10 @@ class user:
         '''
 
         Contact.account_list.remove(self)
+
+    @classmethod
+    def display_contacts(cls):
+        '''
+        method that returns the contact list
+        '''
+        return cls.contact_list
