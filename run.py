@@ -74,31 +74,34 @@ while True:
                     print('\n')
 
                     for contact in display_accounts():
-                                            print(f"{account.first_name} {account.last_name} .....{account.phone_number}")
+
+                        print(f"{account.first_name} {account.last_name} .....{account.phone_number}")
 
                     print('\n')
-            else:
+                else:
                     print('\n')
                     print("You dont seem to have any accounts saved yet")
                     print('\n')
 
             elif short_code == 'fc':
-
                     print("Enter the number you want to search for")
-
                     search_number = input()
-            if check_existing_accounts(search_number):
-                    search_contact = find_account(search_number)
+                if check_existing_accounts(search_number):
+                    search_account = find_account(search_number)
                     print(f"{search_account.first_name} {search_account.last_name}")
                     print('-' * 20)
 
+
                     print(f"Phone number.......{search_account.phone_number}")
                     print(f"Email address.......{search_account.email}")
-            else:
+                else:
                     print("That account does not exist")
 
             elif short_code == "ex":
-                    print("Bye .......")
-                    break
-            else:
+                print("Bye .......")
+                break
+
+
+                else:
+
                     print("I really didn't get that. Please use the short codes")
