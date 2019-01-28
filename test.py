@@ -1,5 +1,6 @@
 import unittest # Importing the unittest module
 from user import user # Importing the user class
+import pyperclip
 
 class TestAccount(unittest.TestCase):
 
@@ -80,3 +81,13 @@ if __name__ == '__main__':
         found_account = account.find_by_number("0711223344")
 
         self.assertEqual(found_account.email,test_account.email)
+
+    def test_copy_email(self):
+        '''
+        Test to confirm that we are copying the email address from a found account
+        '''
+
+        self.new_account.save_()
+        Account.copy_email("0712345678")
+
+        self.assertEqual(self.new_account.email,pyperclip.paste())
