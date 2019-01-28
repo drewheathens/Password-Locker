@@ -2,7 +2,7 @@ class user:
     """
     Class that generates new instances of user accounts.
     """
-    account_list = [] # Empty contact list
+    account_list = [] # Empty account list
       # Init method up here
     def save_account(self):
 
@@ -22,3 +22,11 @@ class user:
         self.account_name = account_name
         self.email = email
         self.password = password
+
+    def delete_account(self):
+
+        '''
+        delete_account method deletes a saved account from the account_list
+        '''
+
+        Contact.account_list.remove(self)
