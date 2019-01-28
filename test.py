@@ -32,17 +32,13 @@ class TestAccount(unittest.TestCase):
         self.assertEqual(self.new_account.password, "jimmymuriuki")
 
 
-if __name__ == '__main__':
-    unittest.main()
     def test_save_account(self):
         '''
         test_save_account test case to test if the contact object is saved into the account list
         '''
-        self.new_contact.save_contact() #saving the new contact
-        self.assertEqual(len(Account.account_list), 1)
-if __name__== '__main__':
-    unittest.main()
-    # Items up here...
+        self.new_account.save_account() #saving the new contact
+        self.assertEqual(len(user.account_list), 5)
+
 
     def test_save_multiple_account(self):
         '''
@@ -50,32 +46,28 @@ if __name__== '__main__':
         objects to our account_list
         '''
         self.new_account.save_account()
-        test_account = Account("Test","user","0712345678","test@user.com") # new account
+        test_account = user("Test","user","0712345678","meme","test@user.com","123") # new account
         test_account.save_account()
-        self.assertEqual(len(Account.account_list),2)
+        self.assertEqual(len(user.account_list),7)
 
-if __name__ == '__main__':
-    unittest.main()
-    # More tests above
     def test_delete_account(self):
             '''
             test_delete_account to test if we can remove an account from our account list
             '''
             self.new_account.save_account()
-            test_account = Account("Test","user","0712345678","test@user.com") # new account
+            test_account = user("Test","user","0712345678","jimmymuriuki","test@user.com","123") # new account
             test_account.save_account()
 
             self.new_account.delete_account()# Deleting an account object
             self.assertEqual(len(Account.account_list),1)
-if __name__ == '__main__':
-    unittest.main()
+
     def test_find_account_by_number(self):
         '''
         test to check if we can find an account by phone number and display information
         '''
 
         self.new_account.save_account()
-        test_account = Account("Test","user","0711223344","test@user.com") # new account
+        test_account = user("Test","user","0711223344","jimmymuriuki","test@user.com","123") # new account
         test_account.save_account()
 
         found_account = account.find_by_number("0711223344")
@@ -91,3 +83,13 @@ if __name__ == '__main__':
         Account.copy_email("0712345678")
 
         self.assertEqual(self.new_account.email,pyperclip.paste())
+
+        @classmethod
+        def display_accounts(cls):
+            '''
+            method that returns the account list
+            '''
+            return cls.account_list
+
+if __name__ == '__main__':
+    unittest.main()
