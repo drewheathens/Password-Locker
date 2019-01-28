@@ -1,5 +1,5 @@
 import unittest # Importing the unittest module
-from account import Account # Importing the contact class
+from user import user # Importing the user class
 
 class TestAccount(unittest.TestCase):
 
@@ -15,7 +15,7 @@ class TestAccount(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_account = account("James","Muriuki","0712345678","jamesmuriuki","james@ms.com","jimmymuriuki") # create contact object
+        self.new_account = user("James","Muriuki","0712345678","jamesmuriuki","james@ms.com","jimmymuriuki") # create contact object
 
 
     def test_init(self):
@@ -38,7 +38,7 @@ if __name__ == '__main__':
         test_save_account test case to test if the contact object is saved into the account list
         '''
         self.new_contact.save_contact() #saving the new contact
-        self.assertEqual(len(account.account_list), 1)
+        self.assertEqual(len(Account.account_list), 1)
 if __name__== '__main__':
     unittest.main()
     # Items up here...
