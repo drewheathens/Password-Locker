@@ -12,7 +12,10 @@ evans mudavadi
 
 Python
 
-##### LICENSE
+##### DESCRIPTION
+App that generates passwords for users and save custom created passwords. Enable users copy on clipboard.
+
+###### LICENSE
 
 MIT License
 
