@@ -7,8 +7,12 @@ on to the right of the screen click the green button "clone or download"
 
 ### AUTHORS
 evans mudavadi
- 
-#### LICENSE
+
+#### TECHNOLOGIES USED
+
+Python
+
+##### LICENSE
 
 MIT License
 
