@@ -34,81 +34,71 @@ def display_accounts():
 
 def main():
     print("Hello Welcome to your account list. What is your name?")
-
     account_name = input()
 
-    print(f"Hello {account_name}. what would you like to do?")
+    print(f"Hello {user_name}. what would you like to do?")
     print('\n')
 
-    while True:
-    print("Use these short codes : 1 - create a new account, 2 - display accounts, 3 -find an account, ex - exit the account list ")
+while True:
+            print("Use these short codes : cc - create a new account, dc - display accounts, fc -find a account, ex -exit the account list ")
 
-    short_code = input().lower()
+            short_code = input().lower()
 
-    if short_code == '1':
-        
-                            print("New Account")
-                            print("-"*10)
+            if short_code == 'cc':
+                print("New Account")
+                print("-"*10)
 
-                            print ("First name ....")
-                            f_name = input()
+                print ("First name ....")
+                f_name = input()
 
-                            print("Last name ...")
-                            l_name = input()
+                print("Last name ...")
+                l_name = input()
 
-                            print("Phone number ...")
-                            p_number = input()
+                print("Phone number ...")
+                p_number = input()
 
-
-                            print("Email address ...")
-                            e_address = input()
-
-                            print("password ...")
-                            password = input()
+                print("Email address ...")
+                e_address = input()
 
 
-                            save_Accounts(create_account(f_name,l_name,p_number,e_address,password)) # create and save new account.
-                            print ('\n')
-                            print(f"New Account {f_name} {l_name} created")
-                            print ('\n')
 
-                    elif short_code == '2':
+                save_accounts(create_account(f_name,l_name,p_number,e_address)) # create and save new account.
+                print ('\n')
+                print(f"New Account {f_name} {l_name} created")
+                print ('\n')
 
-                            if display_accounts():
-                                    print("Here is a list of all your accountts")
-                                    print('\n')
+            elif short_code == 'dc':
 
-                                    for account in display_accounts():
+                if display_accounts():
+                    print("Here is a list of all your accounts")
+                    print('\n')
+
+                    for contact in display_accounts():
                                             print(f"{account.first_name} {account.last_name} .....{account.phone_number}")
 
-                                    print('\n')
-                            else:
-                                    print('\n')
-                                    print("You dont seem to have any acounts saved yet")
-                                    print('\n')
+                    print('\n')
+            else:
+                    print('\n')
+                    print("You dont seem to have any accounts saved yet")
+                    print('\n')
 
-                    elif short_code == '3':
+            elif short_code == 'fc':
 
-                            print("Enter the number you want to search for")
+                    print("Enter the number you want to search for")
 
-                            search_number = input()
-                            if check_existing_accounts(search_number):
-                                    search_account = find_account(search_number)
-                                    print(f"{search_account.first_name} {search_account.last_name}")
-                                    print('-' * 20)
+                    search_number = input()
+            if check_existing_accounts(search_number):
+                    search_contact = find_account(search_number)
+                    print(f"{search_account.first_name} {search_account.last_name}")
+                    print('-' * 20)
 
-                                    print(f"Phone number.......{search_account.phone_number}")
-                                    print(f"Email address.......{search_account.email}")
-                            else:
-                                    print("That account does not exist")
+                    print(f"Phone number.......{search_account.phone_number}")
+                    print(f"Email address.......{search_account.email}")
+            else:
+                    print("That account does not exist")
 
-                    elif short_code == "ex":
-                            print("Ciao .......")
-                            break
-                    else:
-                            print("I really didn't get that. Please use 1, 2, 3 or ex")
-
-
-if __name__ == '__main__':
-
-    main()
+            elif short_code == "ex":
+                    print("Bye .......")
+                    break
+            else:
+                    print("I really didn't get that. Please use the short codes")
