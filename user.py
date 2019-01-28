@@ -40,7 +40,7 @@ class user:
         '''
         return cls.account_list
 
-    def check_existing_user(number):
+    def check_existing_account(number):
         '''
         Function that check if a account exists with that number and return a Boolean
         '''
