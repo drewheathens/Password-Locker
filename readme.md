@@ -2,7 +2,7 @@
 
 ## INSTALATION
 
-Go-to my  github repository https://github.com/drewheathens/Password-LOCKER
+Go-to my  github repository https://github.com/drewheathens/Password-Locker
 on to the right of the screen click the green button "clone or download"
 
 In your terminal run  $ git clone https://github.com/drewheathens/Password-Locker.git
