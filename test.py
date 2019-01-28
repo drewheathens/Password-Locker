@@ -55,3 +55,28 @@ if __name__== '__main__':
 
 if __name__ == '__main__':
     unittest.main()
+    # More tests above
+    def test_delete_account(self):
+            '''
+            test_delete_account to test if we can remove an account from our account list
+            '''
+            self.new_account.save_account()
+            test_account = Account("Test","user","0712345678","test@user.com") # new account
+            test_account.save_account()
+
+            self.new_account.delete_account()# Deleting an account object
+            self.assertEqual(len(Account.account_list),1)
+if __name__ == '__main__':
+    unittest.main()
+    def test_find_account_by_number(self):
+        '''
+        test to check if we can find an account by phone number and display information
+        '''
+
+        self.new_account.save_account()
+        test_account = Account("Test","user","0711223344","test@user.com") # new account
+        test_account.save_account()
+
+        found_account = account.find_by_number("0711223344")
+
+        self.assertEqual(found_account.email,test_account.email)
