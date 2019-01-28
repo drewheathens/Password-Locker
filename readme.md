@@ -5,6 +5,8 @@
 Go-to my  github repository https://github.com/drewheathens/Password-LOCKER
 on to the right of the screen click the green button "clone or download"
 
+In your terminal run  $ git clone https://github.com/drewheathens/Password-Locker.git
+
 ### AUTHORS
 evans mudavadi
 
@@ -14,6 +16,10 @@ Python
 
 ##### DESCRIPTION
 App that generates passwords for users and save custom created passwords. Enable users copy on clipboard.
+
+##### CONTACT information
+
+For inquiries and clarifications feel free to email me mudavadie@gmail.com
 
 ###### LICENSE
 
