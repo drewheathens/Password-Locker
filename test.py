@@ -37,7 +37,7 @@ class TestAccount(unittest.TestCase):
         test_save_account test case to test if the contact object is saved into the account list
         '''
         self.new_account.save_account() #saving the new contact
-        self.assertEqual(len(user.account_list), 5)
+        self.assertEqual(len(user.account_list), 6)
 
 
     def test_save_multiple_account(self):
@@ -48,7 +48,7 @@ class TestAccount(unittest.TestCase):
         self.new_account.save_account()
         test_account = user("Test","user","0712345678","meme","test@user.com","123") # new account
         test_account.save_account()
-        self.assertEqual(len(user.account_list),7)
+        self.assertEqual(len(user.account_list),8)
 
     def test_delete_account(self):
             '''
@@ -70,7 +70,7 @@ class TestAccount(unittest.TestCase):
         test_account = user("Test","user","0711223344","jimmymuriuki","test@user.com","123") # new account
         test_account.save_account()
 
-        found_account = account.find_by_number("0711223344")
+        found_user = user.find_by_number("0711223344")
 
         self.assertEqual(found_account.email,test_account.email)
 
@@ -79,7 +79,7 @@ class TestAccount(unittest.TestCase):
         Test to confirm that we are copying the email address from a found account
         '''
 
-        self.new_account.save_()
+        self.new_account.save_account()
         Account.copy_email("0712345678")
 
         self.assertEqual(self.new_account.email,pyperclip.paste())
