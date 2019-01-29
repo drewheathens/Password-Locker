@@ -17,7 +17,7 @@ Python
 ##### DESCRIPTION
 App that generates passwords for users and save custom created passwords. Enable users copy on clipboard.
 
-##### CONTACT information
+##### CONTACT INFORMATION
 
 For inquiries and clarifications feel free to email me mudavadie@gmail.com
 
