@@ -1,20 +1,18 @@
-class user:
+class User:
     """
     Class that generates new instances of user accounts.
     """
     account_list = [] # Empty account list
-      # Init method up here
+
     def save_account(self):
 
         '''
         save_account method saves account objects into account_list
         '''
 
-        user.account_list.append(self)
+        User.account_list.append(self)
 
     def __init__(self,first_name,last_name,phone_number,account_name,email,password):
-
-      # docstring removed for simplicity
 
 
 
@@ -31,7 +29,7 @@ class user:
         delete_account method deletes a saved account from the account_list
         '''
 
-        Contact.account_list.remove(self)
+        User.account_list.remove(self)
 
     @classmethod
     def display_accounts(cls):
@@ -44,4 +42,18 @@ class user:
         '''
         Function that check if a account exists with that number and return a Boolean
         '''
-        return account.account_exist(number)
+        return User.account_exist(number)
+    @classmethod
+    def find_by_number(cls,number):
+        '''
+        Method that takes in a number and returns an account that matches that number.
+
+        Args:
+            number: Phone number to search for
+        Returns :
+            Account of person that matches the number.
+        '''
+
+        for user in cls.account_list:
+            if user.phone_number == number:
+                return user
