@@ -29,7 +29,7 @@ def display_account():
     '''
     Function that returns all the saved accounts
     '''
-    return User.account_list()
+    return User.display_account()
 
 def main():
     print("Hello Welcome to your account list. What is your name?")

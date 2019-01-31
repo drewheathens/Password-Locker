@@ -36,7 +36,7 @@ class User:
         '''
         method that returns the account list
         '''
-        return cls.account_list\
+        return cls.account_list
 
 
 
