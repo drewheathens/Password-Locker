@@ -17,27 +17,28 @@ on to the right of the screen click the green button "clone or download"
 
 In your terminal run  $ git clone https://github.com/drewheathens/Password-Locker.git
 
-##### AUTHORS
+#### AUTHORS
 evans mudavadi
 
-###### TECHNOLOGIES USED
+#### TECHNOLOGIES USED
 
  Python
 
 
-####### PROJECT STATUS
+#### PROJECT STATUS
+
  Th project is still under development.
 
-######## CONTACT INFORMATION
+#### CONTACT INFORMATION
 
 For inquiries and clarifications feel free to email me mudavadie@gmail.com
 
-######### **CONTRIBUTION**
+#### **CONTRIBUTION**
 
 When contributing to this repository, please first discuss the change you wish to make via issue.
 
 
-########## LICENSE
+#### LICENSE
 
 MIT License
 
