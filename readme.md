@@ -1,27 +1,43 @@
 # PASSWORD-LOCKER
 
-## INSTALATION
+## DESCRIPTION
+App that generates passwords for users and save custom created passwords. Enable users copy on clipboard.
+
+### BDD
+| BEHAVIOUR | INPUT | OUTPUT |
+|-----------|-------|--------|
+|username prompt|username|salute message. Inquiry on what to be done next|
+|Short codes and their descriptions|||
+
+
+#### INSTALATION
 
 Go-to my  github repository https://github.com/drewheathens/Password-Locker
 on to the right of the screen click the green button "clone or download"
 
 In your terminal run  $ git clone https://github.com/drewheathens/Password-Locker.git
 
-### AUTHORS
+##### AUTHORS
 evans mudavadi
 
-#### TECHNOLOGIES USED
+###### TECHNOLOGIES USED
 
-Python
+ Python
 
-##### DESCRIPTION
-App that generates passwords for users and save custom created passwords. Enable users copy on clipboard.
 
-##### CONTACT INFORMATION
+####### PROJECT STATUS
+ Th project is still under development.
+
+######## CONTACT INFORMATION
 
 For inquiries and clarifications feel free to email me mudavadie@gmail.com
 
-###### LICENSE
+######### **CONTRIBUTION**
+
+When contributing to this repository, please first discuss the change you wish to make via issue.
+
+
+########## LICENSE
 
 MIT License
 
